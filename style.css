@@ -92,3 +92,21 @@ color: #ffffff;
 h1{
     font-family: sans-serif;
 }
+
+.footer{
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact{
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.fa-solid{
+    color: red;
+    
+}
+h2{
+    color: #ffffff;
+}
