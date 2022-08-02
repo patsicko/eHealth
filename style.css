@@ -5,13 +5,15 @@ body{
     margin: 0;
     padding: 0;
     background-color: #E2E2E2;
+    height:auto;
 
 }
 
 .main{
     background-color: #f0f9ff;
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
 }
 
 .header{
@@ -112,6 +114,9 @@ h2{
     color: #ffffff;
 }
 
+/* dashboard */
+
+
 
 .dashboard{
 
@@ -121,18 +126,19 @@ h2{
     height: auto;
     position: relative;
     margin-top: 30px;
+    display: none;
+  
 
 
 }
 .sidebar{
     width: 310px;
-    height: 1000px;
-    border: 1px solid gray;
+    height: 1500px;
+    border: 0.1px solid rgb(248, 246, 246);
 }
 .dashboard-header{
     position: absolute;
     right: 0;
-    border: 1px solid black;
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -190,7 +196,9 @@ i{
 }
 
 
-.fa-user-doctor,.fa-magnifying-glass,.fa-gear,.fa-angle-down,.fa-briefcase,.fa-hospital,.fa-hospital-user,.fa-grip,.fa-pills{
+.fa-user-doctor,.fa-magnifying-glass,.fa-gear,
+.fa-angle-down,.fa-briefcase,.fa-hospital,
+.fa-hospital-user,.fa-grip,.fa-pills,.fa-file,.fa-arrow-right-from-bracket{
     color: grey;
    
 }
@@ -211,4 +219,110 @@ i{
     font-weight: bold;
     font-family: sans-serif;
     margin-top: 50px;
+    cursor: pointer;
 }
+
+.booking-icon{
+    font-size: 3rem;color: #ffffff;
+
+}
+.booking{
+    background-color: #418afc;
+    width: 250px;
+    height: 350px;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.6rem;
+    color: #ffffff;
+    font-family: sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.book-appointment{
+    height: 40px;
+    width: 120px;
+    border-radius: 8px;
+    color:#418afc;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+
+}
+.dashboard-content{
+    border:2px solid red;
+    height: 1300px;
+    position: absolute;
+    right: 0;
+    width: 80%;
+
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 100px;
+    background-color: #fbfeff;
+   
+}
+
+.hide-main{
+    display: none;
+}
+.show-dashboard{
+    display: block;
+}
+
+/* .login-form{
+    height: 800px;
+    width: 950px;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: -70px;
+    border-radius: 40px;
+    text-align: center;
+    color: #0004ef;
+
+} */
+
+.login-field{
+    height: 800px;
+    width: 950px;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: -70px;
+    border-radius: 40px;
+    text-align: center;
+    color: #0004ef;
+    padding-top: 80px;
+    transform: translateY(-1400px);
+    transition: 1s ease-in-out;
+    
+}
+
+.show-login{
+    transform: translateY(0px); 
+    transition: 1s ease-in-out;
+}
+h3{
+    color: grey;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+input[type=text],input[type=password]{
+    width: 80%;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 36px;
+    padding-left: 40px;
+
+}
+
+button[type=submit]{
+    width: 80%;
+    height: 80px;
+    border-radius: 35px;
+    background-color: #5154f7;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
