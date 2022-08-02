@@ -4,6 +4,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #E2E2E2;
 
 }
 
@@ -109,4 +110,105 @@ h1{
 }
 h2{
     color: #ffffff;
+}
+
+
+.dashboard{
+
+    background-color: #ffffff;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
+
+
+}
+.sidebar{
+    width: 310px;
+    height: 1000px;
+    border: 1px solid gray;
+}
+.dashboard-header{
+    position: absolute;
+    right: 0;
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.search{
+    border:0.5px solid rgb(209, 202, 202);
+    height: 40px;
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+input[type=search]{
+    border: none;
+    outline: none;
+    
+}
+i{
+   color: gray;
+  
+}
+.user{
+    display: flex;
+    justify-content: space-evenly;
+    /* border:0.5px solid rgb(209, 202, 202); */
+    width: 140px;
+    height: 40px;
+    padding-top: 0.5rem;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.fname{
+    background-color: #418afc;
+    width: 2rem;
+    text-align: center;
+    height: 1.7rem;
+    border-radius: 50%;
+    font-weight: 900;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.lname{
+ 
+    
+   
+    text-align: center;
+    height: 1.7rem;
+    color: #0004ef;
+    font-weight: 900;
+    font-size: 1.5rem; 
+}
+
+
+.fa-user-doctor,.fa-magnifying-glass,.fa-gear,.fa-angle-down,.fa-briefcase,.fa-hospital,.fa-hospital-user,.fa-grip,.fa-pills{
+    color: grey;
+   
+}
+.dash{
+    border:0.1px solid rgb(237, 226, 226);
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 1.6rem;
+    color: #0004ef;  
+}
+.dashboard-menu{
+ 
+    padding-left: 20px;
+    height: auto;
+    font-size: 1.4rem;
+    color: gainsboro;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-top: 50px;
 }
