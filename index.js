@@ -8,17 +8,28 @@ const main=document.getElementById("main");
 const dashboard=document.getElementById("dashboard");
 const loginField=document.getElementById("login-field");
 const  loginButton=document.getElementById("login-button");
-console.log(loginButton)
+const phone=document.getElementById("phone");
+const password=document.getElementById("password");
+console.log(password);
 
 
 
+// const message=JSON.stringify({"phone":"0785189326","password":"12345678"});
+const header={"Accept":"application/json"};
 
-const header={"Accept":"application/json","content-type":"application/json"};
-const message=JSON.stringify({"phone":"0785189326","password":"12345678"});
+const formData=new FormData();
+// formData.append("phone",phone.value);
+// formData.append("password",password.value);
+
+formData.append("phone","0785189326");
+
+formData.append("password","12345678");
+// const message=JSON.stringify({"phone":phone.value,"password":password.value});
 
 const log=async()=>{
-const data=await (await fetch("https://mdbackend.herokuapp.com/api/authenticate",{method:"POST",headers:header,body:message})).json();
+const data=await (await fetch("https://mdbackend.herokuapp.com/api/authenticate",{method:"POST",headers:header,body:formData})).json();
 console.log(data.data);
+console.log(phone.value)
 
 
 }
