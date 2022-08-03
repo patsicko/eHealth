@@ -24,7 +24,9 @@ body{
 }
 .navigations{
     display: flex;
-    justify-content: space-around;   
+    justify-content: space-around; 
+    margin-right: 250px;  
+    width: 800px;
 }
 
 .navigations a{
