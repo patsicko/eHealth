@@ -273,17 +273,7 @@ i{
     display: block;
 }
 
-/* .login-form{
-    height: 800px;
-    width: 950px;
-    background-color: #ffffff;
-    margin: auto;
-    margin-top: -70px;
-    border-radius: 40px;
-    text-align: center;
-    color: #0004ef;
 
-} */
 
 .login-field{
     height: 800px;
@@ -328,3 +318,31 @@ button[type=submit]{
     color: #ffffff;
 }
 
+
+.hospitals{
+    background-color: #d1d6f5;
+    height: 1000px;
+    width: 550px;
+    padding-top: 20px;
+}
+.fa-x{
+    font-size: 2rem;
+    position: relative;
+    left: 500px;
+    cursor: pointer;
+
+}
+.create-hospital,.list-hospital{
+    width: 80%;
+    height: 80px;
+    /* border-radius: 20px; */
+    font-size: 32px;
+    padding-left: 2px;
+    background-color: #d1d6f5;
+    color: #5154f7;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+    display: none;
+
+}
