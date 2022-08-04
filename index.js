@@ -8,9 +8,10 @@ const main=document.getElementById("main");
 const dashboard=document.getElementById("dashboard");
 const loginField=document.getElementById("login-field");
 const  loginButton=document.getElementById("login-button");
+const createHospital=document.getElementsByClassName("create-hospital")[0];
+const container=document.getElementById("container");
+console.log(container);
 
-console.log(password);
-console.log("this is pssword");
 
 
 
@@ -69,7 +70,47 @@ localStorage.setItem("token","eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxI
 
 
 
+
+
+const hospital=document.getElementsByClassName("hospital")[0];
+const hospitals=document.getElementsByClassName("hospitals")[0];
+const hideHospitals=document.getElementsByClassName("fa-x")[0];
+
+
+hospital.addEventListener("click",e=>{
+hospitals.classList.toggle("show-hospital");
+})
+
+hideHospitals.addEventListener("click",e=>{
+    hospitals.classList.toggle("show-hospital");
+})
+
+createHospital.addEventListener("click",e=>{
+container.classList.toggle("show-container");
+hospitals.classList.toggle("hide-hospitals");
+console.log("this is container");
+})
+
 // const createHospital=async()=>{
+
+
+    const hospitalName=document.getElementById("hname");
+    console.log(hospitalName)
+    const code=document.getElementById("code").value;
+    const type=document.getElementById("type").value;
+    const district=document.getElementById("district").value;
+    const sector=document.getElementById("sector").value;
+    const cell=document.getElementById("cell").value;
+    const village=document.getElementById("village").value;
+    const email=document.getElementById("email").value;
+    const createH=document.getElementById("create");
+
+    console.log(hospitalName);
+
+    createH.addEventListener("click",e=>{
+        e.preventDefault();
+        console.log("hello");  
+    })
 
 //     const data=await (await fetch("https://mdbackend.herokuapp.com/api/create-hospital",{method:"POST",headers:{"Accept":"application/json"},body:formF})).json();
 //     console.log(data)
@@ -80,5 +121,3 @@ localStorage.setItem("token","eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxI
 //     createHospital();
 
 // })
-
-

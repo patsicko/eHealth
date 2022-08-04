@@ -113,6 +113,7 @@
         <div class="hospitals">
           <i class="fa-solid fa-x"></i><br>
 
+            
             <button class="create-hospital" type="button">Create hospital</button> 
             <button class="list-hospital" type="button">List hospitals</button>
 
@@ -131,18 +132,19 @@
          
           </div>
            <div class="dashboard-menu">
-            <i class="fa-solid fa-hospital"></i> <span class="hospital">Hospitals</span> <br><br>
+            <span class="hospital"><i class="fa-solid fa-hospital"></i>   Hospitals</span> <br><br>
           
-            <i class="fa-solid fa-user-doctor"></i> <span class="doctor">Doctor</span><br><br>
+           <span   class="doctor">  <i class="fa-solid fa-user-doctor"></i> Doctor</span><br><br>
            
-            <i class="fa-solid fa-hospital-user"></i> <span class="patient">Patient</span><br><br>
-            <i class="fa-solid fa-briefcase"></i> <span class="appointment">Appointment</span>
+         <span class="patient">    <i class="fa-solid fa-hospital-user"></i> Patient</span><br><br>
+             <span class="appointment"><i class="fa-solid fa-briefcase"></i> Appointment</span>
             <br><br><br><br>
-            <i class="fa-solid fa-pills"></i><span class="pharmacy"> Pharmacy</span><br><br>
-            <i class="fa-solid fa-file"></i> <span class="blog">Blog</span><br><br>
-            <i class="fa-solid fa-arrow-right-from-bracket"></i> <span class="logout">Logout</span>
+            <span class="pharmacy"> <i class="fa-solid fa-pills"></i> Pharmacy</span><br><br>
+            <span class="blog"><i class="fa-solid fa-file"></i> Blog</span><br><br>
+             <span class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</span>
             <br><br><br><br>
            </div>
+
            <div class="booking">
             <i class="fa-solid booking-icon fa-briefcase"></i> <br><br>
             <strong>Appointment</strong>  <br><br>
@@ -155,7 +157,26 @@
         </div>
     </div>
      
+    <!-- FROTM TO CREATE HOSPITAL -->
+
+<div  id="container" class="container">
+  <form id="createH">
+    <input type="text" id="hname" placeholder="Hospital name"> <br><br>
+    <input type="text" id="code"  placeholder="code"><br><br>
+    <input type="text" id="type"  placeholder="type"><br><br>
+    <input type="text" id="district"  placeholder="District"><br><br>
+    <input type="text" id="sector"  placeholder="Sector"><br><br>
+    <input type="text" id="cell"  placeholder="Cell"><br><br>
+    <input type="text" id="village"  placeholder="Village"><br><br>
+    <input type="email" id="email"  placeholder="email"><br><br>
+    <button id="create" type="submit">create</button><br><br>
     
+  
+    </form>
+    
+     </div>
+  
+  
 
 
     <div class="footer">

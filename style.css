@@ -6,6 +6,7 @@ body{
     padding: 0;
     background-color: #E2E2E2;
     height:auto;
+    position: relative;
 
 }
 
@@ -59,8 +60,6 @@ color: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 100px;
-    /* justify-content: center; */
-  
    padding-top: 100px;
    width: 90%;
    margin: auto;
@@ -116,6 +115,8 @@ h2{
     color: #ffffff;
 }
 
+
+
 /* dashboard */
 
 
@@ -152,13 +153,15 @@ h2{
 }
 .search{
     border:0.5px solid rgb(209, 202, 202);
-    height: 40px;
-    padding-top: 13px;
+    height: 44px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 
 input[type=search]{
     border: none;
+    height: 28px;
+   
     outline: none;
     
 }
@@ -169,7 +172,7 @@ i{
 .user{
     display: flex;
     justify-content: space-evenly;
-    /* border:0.5px solid rgb(209, 202, 202); */
+
     width: 140px;
     height: 40px;
     padding-top: 0.5rem;
@@ -252,7 +255,7 @@ i{
 
 }
 .dashboard-content{
-    border:2px solid red;
+    
     height: 1300px;
     position: absolute;
     right: 0;
@@ -271,9 +274,23 @@ i{
 }
 .show-dashboard{
     display: block;
+   
 }
 
 
+.container{
+    width: 80%;
+  position: absolute;
+  top: 0;
+    height: auto;
+   
+     text-align: center;
+     display: none;
+    
+ }
+ .show-container{
+    display: block;
+ }
 
 .login-field{
     height: 800px;
@@ -287,10 +304,12 @@ i{
     padding-top: 80px;
     transform: translateY(-1400px);
     transition: 1s ease-in-out;
+    display: none;
     
 }
 
 .show-login{
+    display: block;
     transform: translateY(0px); 
     transition: 1s ease-in-out;
 }
@@ -324,6 +343,19 @@ button[type=submit]{
     height: 1000px;
     width: 550px;
     padding-top: 20px;
+    border-radius: 8px;
+    transform: translateX(-300%);
+    transition: 1s ease-in-out;
+   
+
+}
+
+.hide-hospitals{
+    display: none;
+}
+.show-hospital{
+transform: translateX(-25%);
+transition: 1s ease-in-out;
 }
 .fa-x{
     font-size: 2rem;
@@ -335,7 +367,7 @@ button[type=submit]{
 .create-hospital,.list-hospital{
     width: 80%;
     height: 80px;
-    /* border-radius: 20px; */
+   
     font-size: 32px;
     padding-left: 2px;
     background-color: #d1d6f5;
@@ -343,6 +375,26 @@ button[type=submit]{
     font-weight: 900;
     cursor: pointer;
     border: none;
-    display: none;
+  
 
+}
+
+::placeholder{
+    font-size: 1.5rem;
+}
+#createH input[type=email]{
+    width: 80%;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 36px;
+    padding-left: 40px;
+}
+#createH{
+    width: 1300px;
+    margin-left: 30%;
+    margin-top: 100px;
+    background-color: rgb(153, 184, 211);
+    height: 1100px;
+    padding-top: 80px;
+    border-radius: 28px;
 }
