@@ -2,6 +2,7 @@
 
 const signup=document.getElementById("signup");
 const login=document.getElementById("login");
+console.log(login)
 
 const main=document.getElementById("main");
 
@@ -44,8 +45,7 @@ if(data.message=="success"){
 }catch(error){
 console.log(error);
 }
-console.log(password);
-console.log(phone)
+
 
 
 }
@@ -54,6 +54,7 @@ console.log(phone)
 login.addEventListener("click",e=>{
    e.preventDefault();
 loginField.classList.toggle("show-login");
+console.log("helloooo");
 
 
 
@@ -91,7 +92,7 @@ hospitals.classList.toggle("hide-hospitals");
 console.log("this is container");
 })
 
-// const createHospital=async()=>{
+const hospitalData=async()=>{
 
 
     const hospitalName=document.getElementById("hname");
@@ -105,19 +106,44 @@ console.log("this is container");
     const email=document.getElementById("email").value;
     const createH=document.getElementById("create");
 
-    console.log(hospitalName);
+   const formData=new FormData();
+ formData.append("names",hospitalName);
+   formData.append("code",code);
+   formData.append("type",type);
+   formData.append("district",district);
+   formData.append("sector",sector);
+   formData.append("cell",cell);
+   formData.append("village",village);
+   formData.append("email",email);
+  
+    // const data=await (await fetch("https://mdbackend.herokuapp.com/api/create-hospital",{method:"POST",headers:{"Accept":"application/json"},body:formF})).json();
+const data=await (await fetch("https://mdbackend.herokuapp.com/api/create-hospital",{method:"POST",headers:{"accept":"application/json","Authorization":`Bearer  ${localStorage.getItem("token")}`},body:formData})).json();
 
-    createH.addEventListener("click",e=>{
-        e.preventDefault();
-        console.log("hello");  
-    })
+console.log(data);
 
-//     const data=await (await fetch("https://mdbackend.herokuapp.com/api/create-hospital",{method:"POST",headers:{"Accept":"application/json"},body:formF})).json();
-//     console.log(data)
-// }
 
-// signup.addEventListener("click",e=>{
-//     e.preventDefault();
-//     createHospital();
+   
+}
 
-// })
+
+createH.addEventListener("click",e=>{
+    e.preventDefault();
+    hospitalData();
+    createH.classList.toggle("hide-createH");
+    listH(); 
+})
+
+localStorage.setItem("token","eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTIyYjQ1NjdjODcxMDQzNGI1ZTU0NzE0NzM1YmZlMzc5NDNkMWZiYmQ3NGNlMTczODhiZTgwYjI5ODUxNDMzOTQwNjYyMDVhN2Y5M2VlOGIiLCJpYXQiOjE2NTk2NjgwMzMsIm5iZiI6MTY1OTY2ODAzMywiZXhwIjoxNjkxMjA0MDMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kkcmv7e136vEfZuoeCgVgvL2B5e-73SQD9BQxw1n7r7ogOQk4R2Hwm2yuzs5Nbt21NgYG7hKSRc1NwLQLI52uqrncM1wzpYMsuNBAWKf-D9zMQNpxOmTzUljFECbN_spoqT4CDUExQ-PiT7mCM6MAOmE0cdBqcoiG8aj63f1uTxRalM6gZhfdeJtgXf7ZwhCYkmWArW9q7lbFxgczF34L9nreB_4TnuffNSPCwgVEt1YZkrcfJUdCMb7i7G4r7VejMW9rLHSHhc-wNma5kxVZzM0i9KKN9C0LFu5dNhvNvLt4CDgTCqzxOqjIjNH5FIGx2BFkN1jaAU0Z8q9TaABLFm2yA3_lPVc46xOif3a8RnKQUT7MB206I9hzdarrKdqZs31kHV4qTTE8_Z8ZnVQ9Qkj5CkLAB5HHn8TAS5N5-qWW0HnwQi2THlnFCevqYjN1VrfIwfcEXpYckUpaf6q30l1dTASTKbShsJpt1rWRMQTC8KvwQkX5MNnfkeIcewBOEeffnWbjo6z8pCOr_Pw-EDqy8bMu_y7iqd4fNcjS8AfQzz04AeVuwpMsmXVHOb2Vd7gGmRDrq8joRVTZ4zr1BhmQpIaM8tRzFPtTiGBkhvrP3Mvj-HDclHhw1z7RsuLrQiUCKUN4XpH4CT7QpS8FnLfOe1oL--Nla3jFnyv4lg")
+
+
+const listH=async()=>{
+    const data=await (await fetch("https://mdbackend.herokuapp.com/api/hospitals")).json();
+   
+const hdata=data.data;
+console.log(hdata);
+
+hdata.map(item=>{
+    
+    for(key in item){container.innerHTML+=`<br> ${key}:${item[key]}` } 
+})}
+
